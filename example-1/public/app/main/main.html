@@ -1,0 +1,16 @@
+<h1>Get Random User</h1>
+
+<div ng-hide="user">
+    <form ng-submit="login(username, password)">
+        <label>Username: <input type="text" ng-model="username"/></label>
+        <label>Password: <input type="password" ng-model="password"/></label>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<div ng-show="user">
+    <h2>Welcome {{user.username}}</h2>
+    <button ng-click="logout()">Logout</button>
+    <button ng-click="getRandomUser()">Get User</button>
+    <pre ng-bind="randomUser | json"></pre>
+</div>
